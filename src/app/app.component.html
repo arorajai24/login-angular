@@ -1,0 +1,13 @@
+<div class="container" style="max-width: 550px">
+  <h2 class="display-4">Angular Login with Google</h2>
+
+    <button type="button" (click)="loginWithGoogle()" class="btn btn-danger">Login with Google</button>
+
+
+  <div *ngIf="this.socialUser">
+    <div class="display-4">{{this.name}}</div>
+    <button type="button" (click)="logOut()" class="btn btn-primary" routerLink="">Log Out</button>
+    <button type="button" routerLink='dashboard'>Dashboard</button>
+  </div>
+</div>
+<router-outlet></router-outlet>
